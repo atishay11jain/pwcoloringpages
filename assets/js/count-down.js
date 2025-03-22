@@ -1,5 +1,5 @@
 'use strict';
-function Util(){};
+function Util() { };
 Util.setAttributes = function (el, attrs) {
     for (var key in attrs) {
         el.setAttribute(key, attrs[key]);
@@ -34,7 +34,7 @@ Util.setAttributes = function (el, attrs) {
 
     CountDown.prototype.createCountDown = function () {
         var wrapper = document.createElement("div");
-        Util.setAttributes(wrapper, {'aria-hidden': 'true', 'class': 'countdown__timer'});
+        Util.setAttributes(wrapper, { 'aria-hidden': 'true', 'class': 'countdown__timer' });
 
         for (var i = 0; i < 4; i++) {
             var timeItem = document.createElement("span"),
@@ -115,18 +115,18 @@ Util.setAttributes = function (el, attrs) {
     };
 
     // Functions calling
-    window.addEventListener ('load', function () {
+    window.addEventListener('load', function () {
         //initialize the CountDown objects
-/*        window.setTimeout(() => {*/
-            var countDown = document.getElementsByClassName('js-countdown');
-            if (countDown.length > 0) {
-                for (var i = 0; i < countDown.length; i++) {
-                    (function (i) {
-                        new CountDown(countDown[i]);
-                    })(i);
-                }
+        /*        window.setTimeout(() => {*/
+        var countDown = document.getElementsByClassName('js-countdown');
+        if (countDown.length > 0) {
+            for (var i = 0; i < countDown.length; i++) {
+                (function (i) {
+                    new CountDown(countDown[i]);
+                })(i);
             }
-  /*      }, 1000);*/
+        }
+        /*      }, 1000);*/
 
     });
 }());

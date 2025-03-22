@@ -9,7 +9,7 @@ $(document).on("click", ".dropdown-item", function () {
 function removeErrorMessages(elementClassName) {
   let existingError = document.getElementsByClassName(elementClassName)[0];
   if (existingError) {
-      existingError.remove();
+    existingError.remove();
   }
 }
 function showError(message, elementClassName) {
@@ -35,7 +35,7 @@ function showError(message, elementClassName) {
 $(document).on("click", "#downloadButton", function (e) {
   e.preventDefault(); // Prevent default link behavior
   var selectedFormat = $("#dropdownMenuButton .inner").text();
-  if(selectedFormat === "Format"){
+  if (selectedFormat === "Format") {
     showError("Please Select A Format", "product-details-download-section");
     return;
   }

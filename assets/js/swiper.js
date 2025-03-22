@@ -1,5 +1,5 @@
 
-var sliderinit = function() {
+var sliderinit = function () {
 
     // basic options for all sliders
     let defaults = {
@@ -9,20 +9,20 @@ var sliderinit = function() {
     // call init function
     initSwipers(defaults);
     function initSwipers(defaults = {}, selector = ".swiper-container") {
-    let swipers = document.querySelectorAll(selector);
-    swipers.forEach((swiper) => {
-        // get options
-        let optionsData = swiper.dataset.swiper
-        ? JSON.parse(swiper.dataset.swiper)
-        : {};
-        // combine defaults and custom options
-        let options = {
-        ...defaults,
-        ...optionsData
-        };
-        // init
-        new Swiper(swiper, options);
-    });
+        let swipers = document.querySelectorAll(selector);
+        swipers.forEach((swiper) => {
+            // get options
+            let optionsData = swiper.dataset.swiper
+                ? JSON.parse(swiper.dataset.swiper)
+                : {};
+            // combine defaults and custom options
+            let options = {
+                ...defaults,
+                ...optionsData
+            };
+            // init
+            new Swiper(swiper, options);
+        });
     }
 }
 sliderinit();
@@ -45,8 +45,8 @@ var swiper = new Swiper(".swiper-3d-7", {
         slideShadows: false,
     },
     navigation: {
-      nextEl: ".next-3d",
-      prevEl: ".prev-3d",
+        nextEl: ".next-3d",
+        prevEl: ".prev-3d",
     },
     pagination: {
         el: ".swiper-pagination",
@@ -92,15 +92,15 @@ var swiper = new Swiper(".slider-3d", {
         slideShadows: false,
     },
     navigation: {
-      nextEl: ".next-3d",
-      prevEl: ".prev-3d",
+        nextEl: ".next-3d",
+        prevEl: ".prev-3d",
     },
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
         renderBullet: function (index, className) {
             return '<span class="' + className + '">' + (index + 1) + "</span>";
-          },
+        },
     },
     breakpoints: {
         500: {

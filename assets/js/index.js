@@ -3,7 +3,7 @@ $(document).on('click', '#connectbtn', function (e) {
 
     $('html, body').animate({
         scrollTop: $('#productsSection').offset().top - 100
-    }, 100);        
+    }, 100);
 });
 
 $(document).ready(function () {
